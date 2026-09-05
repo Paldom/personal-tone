@@ -1,0 +1,2 @@
+# personal-tone
+Agent Skills that capture your personal writing voice from your own samples and generate emails, posts, and documents in your unique tone, vocabulary, and structure.
