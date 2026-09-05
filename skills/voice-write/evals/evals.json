@@ -1,0 +1,126 @@
+{
+  "skill": "voice-write",
+  "cases": [
+    {
+      "type": "should_trigger",
+      "prompt": "write this in my voice: tell the client the launch slips a week, offer a call"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "reply to this email like I would"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "draft a message to Sarah in my style declining the friday meeting"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "make this sound like me"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "rewrite this paragraph in my own voice, it reads like a bot"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "answer this slack message as me: yes, ship it, but not before the DPA is signed"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "write a linkedin post the way I write, about the hiring freeze"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "can u write this like i would"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "respond to Tom as me — we can't make friday, propose the 14th"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "draft the follow-up in my usual tone of voice using my profile"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "does this sound like me?"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "build my voice profile from my sent mail"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "here's what I actually sent instead, learn from it"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "make this email more formal"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "make this read less like AI"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "reply in their tone, matching the sender's register"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "write a cover letter for this job posting"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "translate this email to Hungarian"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "write the voice-over script for the demo video"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "proofread this email for typos"
+    },
+    {
+      "type": "quality",
+      "prompt": "Write this in my voice (email, external): the deliverable is late by a week because the vendor missed the API deadline; offer a call Thursday.",
+      "expected_behavior": [
+        "runs pick_exemplars.py for email-external, reads the length budget and skeleton, and drafts within the budget copying the skeleton's greeting/sign-off classes",
+        "uses only the facts in the brief and marks anything unknown (e.g. the recipient's name, Thursday time) with [?]",
+        "runs voice_check.py on the draft with --brief and --exemplars, reports the verdict, and fixes FAILs before presenting",
+        "never sends or posts anything; presents the draft for the user to edit",
+        "does not inflate: no opener the profile never uses, no extra pleasantries, no closing recap"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "Reply to this as me: <pasted 3-line email from a partner asking for the numbers by Friday>. Answer: rough cut Friday, final next week.",
+      "expected_behavior": [
+        "uses --reply-to so the reply length tracks the incoming message and picks reply exemplars",
+        "answers in sentence one, keeps the register's usual greeting/sign-off distribution rather than defaulting to formal"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "Write my resignation email in my voice.",
+      "expected_behavior": [
+        "says this is a high-stakes message, keeps the draft minimal, and recommends the user writes the first and last line themselves",
+        "still drafts if the user confirms, with [?] for dates and names"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "make this sound like me (no profile exists yet)",
+      "expected_behavior": [
+        "explains that voice-corpus and voice-profile must run first and offers to do so; if the user wants a draft anyway, labels it as not in their voice"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "Write it in my voice but I don't want you to read my samples into context this time.",
+      "expected_behavior": [
+        "uses --minimal (profile constraints only, no exemplars) and says the draft will match structure and bans but less of the rhythm"
+      ]
+    }
+  ]
+}

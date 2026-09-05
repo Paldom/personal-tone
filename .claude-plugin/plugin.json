@@ -1,0 +1,11 @@
+{
+  "name": "personal-tone",
+  "description": "Agent Skills that capture your personal writing voice from your own samples and generate emails, posts, and documents in your unique tone, vocabulary, and structure.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Paldom",
+    "url": "https://github.com/Paldom"
+  },
+  "homepage": "https://github.com/Paldom/personal-tone",
+  "license": "MIT"
+}

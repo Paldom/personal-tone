@@ -1,0 +1,19 @@
+register | n | words | tier | msg_words_median | sent_len_median | contractions_per_100w | hedges_per_100w | polite_per_100w | question_share | exclaim_share | greeting_share | signoff_share | lowercase_start_share | emoji_msg_share | em_dash_msg_share | ai_vocab_per_1kw
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
+email-external | 12 | 269 | directional | 23.5 | 6 | 4.37 | 0.0 | 0.0 | 0.151 | 0.0 | 0.833 | 1.0 | 0.0 | 0.0 | 0.0 | 0.0
+email-internal | 8 | 91 | provisional | 11.0 | 8 | 3.3 | 0.0 | 0.0 | 0.091 | 0.0 | 0.0 | 0.0 | 0.455 | 0.0 | 0.0 | 0.0
+
+## email-external — length p10/p50/p90: 16.3/23.5/27.9 words, paragraphs p90: 1.0, replies: 50%
+greetings: hi (58%); hey (25%); none (17%)
+sign-offs: thanks (33%); best (33%); name-only (33%)
+signature moves: none (needs ≥20 samples and ≥3 uses)
+never-candidates: 73 AI-default terms absent (confidence low; proposals — confirm via --bans)
+
+## email-internal — length p10/p50/p90: 9.4/11.0/13.3 words, paragraphs p90: 1.0, replies: 38%
+greetings: none (100%)
+sign-offs: none (100%)
+signature moves: none (needs ≥20 samples and ≥3 uses)
+never-candidates: 0 AI-default terms absent (confidence none; proposals — confirm via --bans)
+WARN: email-internal is provisional (8 samples) — exemplars only; do not trust its bands
+
+wrote ~/.personal-tone/metrics.json, ~/.personal-tone/profile.json, ~/.personal-tone/exemplars.json

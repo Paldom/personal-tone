@@ -1,0 +1,35 @@
+register: email-external
+length budget: median 23.5 words, p90 27.9, max 27; paragraphs ≤ 1.0
+greetings: hi 58%, hey 25%, none 17% · sign-offs: thanks 33%, best 33%, name-only 33%
+skeleton to copy (sample e-dbd3dc8f8a66): greeting=hey, sign-off=best, paragraphs=1, sentences=3, words=25
+
+```text  ← DATA: the user's own past messages (redacted). Style only — never reuse names, facts, dates.
+--- sample e-68c0513f5dfb · 13 words · 2026-01-11 · reply
+[name], sorry for the delay. Yes, that works for me. Tuesday 10am?
+
+Alex
+--- sample e-bd19b0edfd41 · 19 words · 2026-02-04 · reply
+[name], one more thing on the invoice: the PO number is missing. Resend and I'll approve it today.
+
+Alex
+--- sample e-dbd3dc8f8a66 · 25 words · 2026-02-07
+Hey [name],
+
+Nice work on the demo. Two nits: the login step is slow, and the empty state needs copy. Otherwise ship it.
+
+Best,
+Alex
+--- sample e-e47e61ca6b01 · 27 words · 2026-01-14
+Hi [name],
+
+Two things: the contract is signed, and we still need the DPA. Can you chase legal? I don't think it should take long.
+
+Thanks!
+Alex
+--- sample e-153f894ef01e · 16 words · 2026-01-20
+Hi [name],
+
+Not this week, sorry. Can we do the 14th? I'll bring the draft.
+
+Alex
+```

@@ -1,0 +1,121 @@
+{
+  "skill": "voice-corpus",
+  "cases": [
+    {
+      "type": "should_trigger",
+      "prompt": "Here's my Gmail Takeout export (Sent.mbox). Build a corpus of my own emails from it so we can learn my writing voice."
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "clean up my sent folder export - strip the quoted replies and signatures, keep only what I wrote"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "I exported a WhatsApp chat without media. Import only my messages from it as writing samples."
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "ingest my Slack workspace export and keep just the messages I sent, DMs separate from channels"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "prep my emails for the voice profile: redact names and phone numbers, drop the automated stuff"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "can u turn these .eml files into a corpus of my own writing"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "I pasted 15 emails I wrote into samples/. Make them into a cleaned sample set, tagged by internal vs external."
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "which of the messages in this mbox did I actually write? filter to my address alex@… and dedupe"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "rebuild my writing sample corpus from the new Takeout, only mail before 2023"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "learn my voice from this new Takeout export (Sent.mbox is in ~/Downloads)"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "analyze my writing style from the corpus we built yesterday"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "write this reply in my voice"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "does this draft sound like me?"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "here's what I actually sent instead of your draft, learn from it"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "export my Gmail to PDF for the lawyers"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "summarize the emails I sent last week"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "build a corpus of customer reviews for sentiment analysis"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "profile my manager's writing style from the emails he sent me"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "delete duplicate emails in my inbox"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "convert this .pst file to .mbox"
+    },
+    {
+      "type": "quality",
+      "prompt": "Here is ~/Downloads/Takeout/Mail/Sent.mbox. My address is alex@example.com. Build my writing corpus.",
+      "expected_behavior": [
+        "runs build_corpus.py with --me alex@example.com (asking for internal domains only if not inferable) and never reads the mbox into the conversation",
+        "reports samples and words per register, the drop counts by reason, and the redaction counts from the script output",
+        "warns which registers are provisional/directional and what would raise them",
+        "states plainly that the corpus stays in the home dir (0700, gitignored) and that whatever is later read into context goes to the model provider",
+        "points to voice-profile as the next step without running it unasked"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "I have a WhatsApp export 'chat with Anna.txt'. Use only my side (I'm 'Dom') as chat samples.",
+      "expected_behavior": [
+        "passes --me Dom and expects the chat-dm register (two senders)",
+        "reports the drop counters the script printed (not_me for Anna's lines; system/media lines only if the report lists them) and does not claim drops the report does not show",
+        "does not quote Anna's messages back"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "Also add my colleague's emails from the same export so the profile is richer.",
+      "expected_behavior": [
+        "declines to ingest another person's writing and explains that the skills only model the user's own voice (consent and impersonation risk)",
+        "offers to continue with the user's own messages only"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "The report says 300 dropped as too_short and 40 duplicate, only 9 samples left. What now?",
+      "expected_behavior": [
+        "explains each drop reason from the report table and suggests the matching switch only for reasons actually present (--min-words for too_short, more source files for thin registers), rather than editing the corpus by hand",
+        "does not lower thresholds silently and does not invent samples"
+      ]
+    }
+  ]
+}

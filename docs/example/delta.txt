@@ -1,0 +1,5 @@
+logged → ~/.personal-tone/calibration.jsonl
+similarity 0.261; words 63→16; paragraphs 2→1; contractions/100w 0.0→0.0; polite/100w 10.53→0.0; hedges/100w 0.0→0.0; opener hi→hi; sign-off best regards→thanks
+tags: LENGTH_CUT, LESS_FORMAL, LLM_ISM, SIGNOFF
+removed: I hope this email finds you well. I wanted to reach out regarding the Q3 numbers | Please do not hesitate to contact me should you have any questions. | Best regards, | Alex Example
+added:   Can you send the Q3 numbers by Friday? Rough cut is fine. | Thanks, | Alex

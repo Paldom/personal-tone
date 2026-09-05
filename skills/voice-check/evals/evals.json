@@ -1,0 +1,124 @@
+{
+  "skill": "voice-check",
+  "cases": [
+    {
+      "type": "should_trigger",
+      "prompt": "does this sound like me?"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "check this draft against my voice profile"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "score this email against my writing style before I send it"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "would I have written this? be honest"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "run the voice check on the reply you drafted"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "is this too formal for me compared to how I usually write?"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "verify this matches how I write to clients"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "voice-check my draft"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "does this read like my slack messages or like a bot"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "how often does the checker false-alarm on my own emails? run the selftest"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "make this sound like me"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "rewrite this in my voice"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "does this sound like it was written by AI?"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "check the grammar in this email"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "build my voice profile"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "here's what I sent instead, note the difference"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "does this email sound professional enough?"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "is this email too long in general?"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "check that this reply answers all of his questions"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "lint this markdown file"
+    },
+    {
+      "type": "quality",
+      "prompt": "Does this sound like me? (external email) — Hi Sarah,\n\nI hope this email finds you well. I wanted to reach out regarding the Q3 numbers we discussed last week. It would be greatly appreciated if you could kindly share the finalized figures at your earliest convenience, as this will enable us to align our planning accordingly.\n\nPlease do not hesitate to contact me should you have any questions.\n\nBest regards,\nDom",
+      "expected_behavior": [
+        "saves the draft to a file, runs voice_check.py with --register email-external, and reports the verdict with the specific findings (length vs the user's band, sign-off class share, banned or AI-default phrases, politeness markers)",
+        "does not rewrite the draft; at most points at what would change the verdict",
+        "distinguishes FAIL (bans, length, paragraphs, never-seen classes) from WARN (advisory) and mentions the self-test rate if known"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "Check this slack reply: 'yep, on it. will ping you after lunch'",
+      "expected_behavior": [
+        "reports INCONCLUSIVE on distribution checks because the draft is under 40 words, while still running ban/opener/sign-off checks",
+        "does not pad the verdict with invented stylistic judgments"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "run the selftest and tell me if I can trust the warnings",
+      "expected_behavior": [
+        "runs voice_check.py --selftest, reports FAIL/WARN rates over the user's own samples, and explains which finding types are false alarms for this corpus"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "does this sound like me (no profile.json exists)",
+      "expected_behavior": [
+        "explains the prerequisite (voice-corpus then voice-profile) instead of judging holistically; if asked for an opinion anyway, labels it as unmeasured"
+      ]
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "check whether this voice recording sounds like me"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "make this less formal and more friendly"
+    }
+  ]
+}

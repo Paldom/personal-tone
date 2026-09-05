@@ -1,0 +1,1154 @@
+{
+ "version": 3,
+ "generated": "2026-09-05T08:51:52+00:00",
+ "registers": {
+  "email-external": {
+   "channel": "email",
+   "samples": 12,
+   "words": 269,
+   "tier": "directional",
+   "date_range": [
+    "2026-01-05",
+    "2026-02-07"
+   ],
+   "reply_share": 0.5,
+   "subject_words_median": 2.0,
+   "english_share": 1.0,
+   "lexicon_reliable": true,
+   "signature_moves": [],
+   "never_candidates": {
+    "confidence": "low",
+    "terms": [
+     "i hope this email finds you well",
+     "i hope this message finds you well",
+     "hope this finds you well",
+     "i wanted to reach out",
+     "i just wanted to",
+     "please don't hesitate",
+     "please do not hesitate",
+     "at your earliest convenience",
+     "it's worth noting",
+     "it is worth noting",
+     "in today's",
+     "as an ai",
+     "great question",
+     "in conclusion",
+     "furthermore,",
+     "moreover,",
+     "additionally,",
+     "it's not just",
+     "it's not about",
+     "i'd be happy to",
+     "feel free to reach out",
+     "looking forward to hearing",
+     "thank you for your understanding",
+     "circle back",
+     "touch base",
+     "per my last email",
+     "just checking in",
+     "just following up",
+     "delve",
+     "delves",
+     "delving",
+     "leverage",
+     "leveraging",
+     "utilize",
+     "utilise",
+     "tapestry",
+     "testament",
+     "underscore",
+     "underscores",
+     "landscape",
+     "multifaceted",
+     "pivotal",
+     "crucial",
+     "robust",
+     "seamless",
+     "seamlessly",
+     "foster",
+     "fostering",
+     "embark",
+     "realm",
+     "vibrant",
+     "elevate",
+     "streamline",
+     "cutting-edge",
+     "game-changer",
+     "game-changing",
+     "groundbreaking",
+     "holistic",
+     "meticulous",
+     "meticulously",
+     "nuanced",
+     "paramount",
+     "transformative",
+     "unlock",
+     "unleash",
+     "intricate",
+     "showcase",
+     "resonate",
+     "harness",
+     "empower",
+     "actionable",
+     "synergy",
+     "navigate the"
+    ]
+   },
+   "features": {
+    "words_total": 269,
+    "body_words_total": 229,
+    "sentences_total": 33,
+    "sent_len_mean": 6.9,
+    "sent_len_median": 6,
+    "short_sent_share": 0.455,
+    "long_sent_share": 0.0,
+    "msg_words_median": 23.5,
+    "msg_words_mean": 22.4,
+    "paras_per_msg_mean": 1,
+    "greeting_share": 0.833,
+    "signoff_share": 1.0,
+    "emoji_msg_share": 0.0,
+    "em_dash_msg_share": 0.0,
+    "bullet_line_share": 0.0,
+    "avg_word_len": 3.92,
+    "contractions_per_100w": 4.37,
+    "hedges_per_100w": 0.0,
+    "boosters_per_100w": 0.0,
+    "polite_per_100w": 0.0,
+    "adverb_ly_per_100w": 0.44,
+    "question_share": 0.151,
+    "exclaim_share": 0.0,
+    "lowercase_start_share": 0.0,
+    "ai_vocab_per_1kw": 0.0
+   },
+   "bands": {
+    "words": {
+     "p10": 16.3,
+     "p50": 23.5,
+     "p90": 27.9,
+     "mean": 22.417,
+     "msg_share": 1.0
+    },
+    "paras": {
+     "p10": 1.0,
+     "p50": 1.0,
+     "p90": 1.0,
+     "mean": 1,
+     "msg_share": 1.0
+    },
+    "sentences": {
+     "p10": 2.0,
+     "p50": 3.0,
+     "p90": 3.0,
+     "mean": 2.75,
+     "msg_share": 1.0
+    },
+    "sent_len_mean": {
+     "p10": 4.47,
+     "p50": 7.35,
+     "p90": 8.93,
+     "mean": 7.192,
+     "msg_share": 1.0
+    },
+    "contractions_per_100w": {
+     "p10": 0.0,
+     "p50": 4.45,
+     "p90": 8.297,
+     "mean": 4.248,
+     "msg_share": 0.583
+    },
+    "hedges_per_100w": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "mean": 0.0,
+     "msg_share": 0.0
+    },
+    "question_share": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.333,
+     "mean": 0.153,
+     "msg_share": 0.417
+    },
+    "exclaim_share": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "mean": 0.0,
+     "msg_share": 0.0
+    },
+    "lowercase_start_share": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "mean": 0.0,
+     "msg_share": 0.0
+    },
+    "em_dash_count": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "mean": 0,
+     "msg_share": 0.0
+    },
+    "emoji_count": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "mean": 0,
+     "msg_share": 0.0
+    },
+    "polite_per_100w": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "mean": 0.0,
+     "msg_share": 0.0
+    },
+    "ai_vocab_count": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "mean": 0,
+     "msg_share": 0.0
+    }
+   },
+   "greeting_classes": [
+    [
+     "hi",
+     7,
+     0.583
+    ],
+    [
+     "hey",
+     3,
+     0.25
+    ],
+    [
+     "none",
+     2,
+     0.167
+    ]
+   ],
+   "signoff_classes": [
+    [
+     "thanks",
+     4,
+     0.333
+    ],
+    [
+     "best",
+     4,
+     0.333
+    ],
+    [
+     "name-only",
+     4,
+     0.333
+    ]
+   ],
+   "openers": [
+    [
+     "hi {name}",
+     7,
+     0.583
+    ],
+    [
+     "hey {name}",
+     3,
+     0.25
+    ],
+    [
+     "(none) name sorry",
+     1,
+     0.083
+    ],
+    [
+     "(none) name one",
+     1,
+     0.083
+    ]
+   ],
+   "starters": [
+    [
+     "can we",
+     2,
+     0.061
+    ],
+    [
+     "quick one",
+     1,
+     0.03
+    ],
+    [
+     "i'd rather",
+     1,
+     0.03
+    ],
+    [
+     "thanks for",
+     1,
+     0.03
+    ],
+    [
+     "we're happy",
+     1,
+     0.03
+    ],
+    [
+     "send the",
+     1,
+     0.03
+    ],
+    [
+     "name sorry",
+     1,
+     0.03
+    ],
+    [
+     "yes that",
+     1,
+     0.03
+    ],
+    [
+     "tuesday am",
+     1,
+     0.03
+    ],
+    [
+     "two things",
+     1,
+     0.03
+    ]
+   ],
+   "ngrams": [],
+   "top_words": [
+    [
+     "i'll",
+     4,
+     17.47
+    ],
+    [
+     "one",
+     3,
+     13.1
+    ],
+    [
+     "take",
+     3,
+     13.1
+    ],
+    [
+     "week",
+     3,
+     13.1
+    ],
+    [
+     "send",
+     2,
+     8.73
+    ],
+    [
+     "numbers",
+     2,
+     8.73
+    ],
+    [
+     "friday",
+     2,
+     8.73
+    ],
+    [
+     "i'd",
+     2,
+     8.73
+    ],
+    [
+     "deck",
+     2,
+     8.73
+    ],
+    [
+     "thanks",
+     2,
+     8.73
+    ],
+    [
+     "happy",
+     2,
+     8.73
+    ],
+    [
+     "name",
+     2,
+     8.73
+    ],
+    [
+     "sorry",
+     2,
+     8.73
+    ],
+    [
+     "yes",
+     2,
+     8.73
+    ],
+    [
+     "works",
+     2,
+     8.73
+    ],
+    [
+     "two",
+     2,
+     8.73
+    ],
+    [
+     "still",
+     2,
+     8.73
+    ],
+    [
+     "call",
+     2,
+     8.73
+    ],
+    [
+     "thing",
+     2,
+     8.73
+    ],
+    [
+     "ship",
+     2,
+     8.73
+    ]
+   ],
+   "hedges": [],
+   "boosters": [],
+   "polite": [],
+   "ai_hits": []
+  },
+  "email-internal": {
+   "channel": "email",
+   "samples": 8,
+   "words": 91,
+   "tier": "provisional",
+   "date_range": [
+    "2026-04-23",
+    "2026-05-07"
+   ],
+   "reply_share": 0.375,
+   "subject_words_median": 1.0,
+   "english_share": 1.0,
+   "lexicon_reliable": true,
+   "signature_moves": [],
+   "never_candidates": {
+    "confidence": "none",
+    "terms": []
+   },
+   "features": {
+    "words_total": 91,
+    "body_words_total": 91,
+    "sentences_total": 11,
+    "sent_len_mean": 8.3,
+    "sent_len_median": 8,
+    "short_sent_share": 0.182,
+    "long_sent_share": 0.0,
+    "msg_words_median": 11.0,
+    "msg_words_mean": 11.4,
+    "paras_per_msg_mean": 1,
+    "greeting_share": 0.0,
+    "signoff_share": 0.0,
+    "emoji_msg_share": 0.0,
+    "em_dash_msg_share": 0.0,
+    "bullet_line_share": 0.0,
+    "avg_word_len": 3.87,
+    "contractions_per_100w": 3.3,
+    "hedges_per_100w": 0.0,
+    "boosters_per_100w": 0.0,
+    "polite_per_100w": 0.0,
+    "adverb_ly_per_100w": 0.0,
+    "question_share": 0.091,
+    "exclaim_share": 0.0,
+    "lowercase_start_share": 0.455,
+    "ai_vocab_per_1kw": 0.0
+   },
+   "bands": {
+    "words": {
+     "p10": 9.4,
+     "p50": 11.0,
+     "p90": 13.3,
+     "mean": 11.375,
+     "msg_share": 1.0
+    },
+    "paras": {
+     "p10": 1.0,
+     "p50": 1.0,
+     "p90": 1.0,
+     "mean": 1,
+     "msg_share": 1.0
+    },
+    "sentences": {
+     "p10": 1.0,
+     "p50": 1.0,
+     "p90": 2.0,
+     "mean": 1.375,
+     "msg_share": 1.0
+    },
+    "sent_len_mean": {
+     "p10": 5.35,
+     "p50": 9.5,
+     "p90": 13.3,
+     "mean": 9.25,
+     "msg_share": 1.0
+    },
+    "contractions_per_100w": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 9.09,
+     "mean": 3.234,
+     "msg_share": 0.375
+    },
+    "hedges_per_100w": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "mean": 0.0,
+     "msg_share": 0.0
+    },
+    "question_share": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.15,
+     "mean": 0.062,
+     "msg_share": 0.125
+    },
+    "exclaim_share": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "mean": 0.0,
+     "msg_share": 0.0
+    },
+    "lowercase_start_share": {
+     "p10": 0.0,
+     "p50": 1.0,
+     "p90": 1.0,
+     "mean": 0.625,
+     "msg_share": 0.625
+    },
+    "em_dash_count": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "mean": 0,
+     "msg_share": 0.0
+    },
+    "emoji_count": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "mean": 0,
+     "msg_share": 0.0
+    },
+    "polite_per_100w": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "mean": 0.0,
+     "msg_share": 0.0
+    },
+    "ai_vocab_count": {
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "mean": 0,
+     "msg_share": 0.0
+    }
+   },
+   "greeting_classes": [
+    [
+     "none",
+     8,
+     1.0
+    ]
+   ],
+   "signoff_classes": [
+    [
+     "none",
+     8,
+     1.0
+    ]
+   ],
+   "openers": [
+    [
+     "(none) hey can",
+     1,
+     0.125
+    ],
+    [
+     "(none) quick q",
+     1,
+     0.125
+    ],
+    [
+     "(none) yep on",
+     1,
+     0.125
+    ],
+    [
+     "(none) thx one",
+     1,
+     0.125
+    ],
+    [
+     "(none) let's do",
+     1,
+     0.125
+    ],
+    [
+     "(none) nope blocked",
+     1,
+     0.125
+    ],
+    [
+     "(none) can you",
+     1,
+     0.125
+    ],
+    [
+     "(none) done merged",
+     1,
+     0.125
+    ]
+   ],
+   "starters": [
+    [
+     "hey can",
+     1,
+     0.091
+    ],
+    [
+     "quick q",
+     1,
+     0.091
+    ],
+    [
+     "staging still",
+     1,
+     0.091
+    ],
+    [
+     "yep on",
+     1,
+     0.091
+    ],
+    [
+     "thx one",
+     1,
+     0.091
+    ],
+    [
+     "let's do",
+     1,
+     0.091
+    ],
+    [
+     "i need",
+     1,
+     0.091
+    ],
+    [
+     "nope blocked",
+     1,
+     0.091
+    ],
+    [
+     "pinging the",
+     1,
+     0.091
+    ],
+    [
+     "can you",
+     1,
+     0.091
+    ]
+   ],
+   "ngrams": [],
+   "top_words": [
+    [
+     "one",
+     2,
+     21.98
+    ],
+    [
+     "hey",
+     1,
+     10.99
+    ],
+    [
+     "look",
+     1,
+     10.99
+    ],
+    [
+     "get",
+     1,
+     10.99
+    ],
+    [
+     "sec",
+     1,
+     10.99
+    ],
+    [
+     "small",
+     1,
+     10.99
+    ],
+    [
+     "quick",
+     1,
+     10.99
+    ],
+    [
+     "deploy",
+     1,
+     10.99
+    ],
+    [
+     "staging",
+     1,
+     10.99
+    ],
+    [
+     "still",
+     1,
+     10.99
+    ],
+    [
+     "shows",
+     1,
+     10.99
+    ],
+    [
+     "old",
+     1,
+     10.99
+    ],
+    [
+     "build",
+     1,
+     10.99
+    ],
+    [
+     "yep",
+     1,
+     10.99
+    ],
+    [
+     "lunch",
+     1,
+     10.99
+    ],
+    [
+     "thx",
+     1,
+     10.99
+    ],
+    [
+     "invoice",
+     1,
+     10.99
+    ],
+    [
+     "export",
+     1,
+     10.99
+    ],
+    [
+     "broken",
+     1,
+     10.99
+    ],
+    [
+     "i'll",
+     1,
+     10.99
+    ]
+   ],
+   "hedges": [],
+   "boosters": [],
+   "polite": [],
+   "ai_hits": []
+  }
+ },
+ "all": {
+  "samples": 20,
+  "words": 360,
+  "tier": "directional",
+  "features": {
+   "words_total": 360,
+   "body_words_total": 320,
+   "sentences_total": 44,
+   "sent_len_mean": 7.3,
+   "sent_len_median": 6.0,
+   "short_sent_share": 0.386,
+   "long_sent_share": 0.0,
+   "msg_words_median": 17.5,
+   "msg_words_mean": 18,
+   "paras_per_msg_mean": 1,
+   "greeting_share": 0.5,
+   "signoff_share": 0.6,
+   "emoji_msg_share": 0.0,
+   "em_dash_msg_share": 0.0,
+   "bullet_line_share": 0.0,
+   "avg_word_len": 3.9,
+   "contractions_per_100w": 4.06,
+   "hedges_per_100w": 0.0,
+   "boosters_per_100w": 0.0,
+   "polite_per_100w": 0.0,
+   "adverb_ly_per_100w": 0.31,
+   "question_share": 0.136,
+   "exclaim_share": 0.0,
+   "lowercase_start_share": 0.114,
+   "ai_vocab_per_1kw": 0.0
+  },
+  "bands": {
+   "words": {
+    "p10": 10.9,
+    "p50": 17.5,
+    "p90": 27.1,
+    "mean": 18,
+    "msg_share": 1.0
+   },
+   "paras": {
+    "p10": 1.0,
+    "p50": 1.0,
+    "p90": 1.0,
+    "mean": 1,
+    "msg_share": 1.0
+   },
+   "sentences": {
+    "p10": 1.0,
+    "p50": 2.0,
+    "p90": 3.0,
+    "mean": 2.2,
+    "msg_share": 1.0
+   },
+   "sent_len_mean": {
+    "p10": 4.93,
+    "p50": 7.85,
+    "p90": 11.2,
+    "mean": 8.015,
+    "msg_share": 1.0
+   },
+   "contractions_per_100w": {
+    "p10": 0.0,
+    "p50": 2.175,
+    "p90": 9.09,
+    "mean": 3.842,
+    "msg_share": 0.5
+   },
+   "hedges_per_100w": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 0.0,
+    "msg_share": 0.0
+   },
+   "question_share": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.35,
+    "mean": 0.117,
+    "msg_share": 0.3
+   },
+   "exclaim_share": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 0.0,
+    "msg_share": 0.0
+   },
+   "lowercase_start_share": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 1.0,
+    "mean": 0.25,
+    "msg_share": 0.25
+   },
+   "em_dash_count": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 0,
+    "msg_share": 0.0
+   },
+   "emoji_count": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 0,
+    "msg_share": 0.0
+   },
+   "polite_per_100w": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 0.0,
+    "msg_share": 0.0
+   },
+   "ai_vocab_count": {
+    "p10": 0.0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "mean": 0,
+    "msg_share": 0.0
+   }
+  },
+  "greeting_classes": [
+   [
+    "none",
+    10,
+    0.5
+   ],
+   [
+    "hi",
+    7,
+    0.35
+   ],
+   [
+    "hey",
+    3,
+    0.15
+   ]
+  ],
+  "signoff_classes": [
+   [
+    "none",
+    8,
+    0.4
+   ],
+   [
+    "thanks",
+    4,
+    0.2
+   ],
+   [
+    "best",
+    4,
+    0.2
+   ],
+   [
+    "name-only",
+    4,
+    0.2
+   ]
+  ],
+  "openers": [
+   [
+    "hi {name}",
+    7,
+    0.35
+   ],
+   [
+    "hey {name}",
+    3,
+    0.15
+   ],
+   [
+    "(none) name sorry",
+    1,
+    0.05
+   ],
+   [
+    "(none) name one",
+    1,
+    0.05
+   ],
+   [
+    "(none) hey can",
+    1,
+    0.05
+   ],
+   [
+    "(none) quick q",
+    1,
+    0.05
+   ],
+   [
+    "(none) yep on",
+    1,
+    0.05
+   ],
+   [
+    "(none) thx one",
+    1,
+    0.05
+   ]
+  ],
+  "starters": [
+   [
+    "can you",
+    2,
+    0.045
+   ],
+   [
+    "can we",
+    2,
+    0.045
+   ],
+   [
+    "quick one",
+    1,
+    0.023
+   ],
+   [
+    "i'd rather",
+    1,
+    0.023
+   ],
+   [
+    "thanks for",
+    1,
+    0.023
+   ],
+   [
+    "we're happy",
+    1,
+    0.023
+   ],
+   [
+    "send the",
+    1,
+    0.023
+   ],
+   [
+    "name sorry",
+    1,
+    0.023
+   ],
+   [
+    "yes that",
+    1,
+    0.023
+   ],
+   [
+    "tuesday am",
+    1,
+    0.023
+   ]
+  ],
+  "ngrams": [],
+  "top_words": [
+   [
+    "one",
+    5,
+    15.62
+   ],
+   [
+    "i'll",
+    5,
+    15.62
+   ],
+   [
+    "numbers",
+    3,
+    9.38
+   ],
+   [
+    "take",
+    3,
+    9.38
+   ],
+   [
+    "week",
+    3,
+    9.38
+   ],
+   [
+    "still",
+    3,
+    9.38
+   ],
+   [
+    "call",
+    3,
+    9.38
+   ],
+   [
+    "quick",
+    2,
+    6.25
+   ],
+   [
+    "send",
+    2,
+    6.25
+   ],
+   [
+    "friday",
+    2,
+    6.25
+   ],
+   [
+    "i'd",
+    2,
+    6.25
+   ],
+   [
+    "deck",
+    2,
+    6.25
+   ],
+   [
+    "thanks",
+    2,
+    6.25
+   ],
+   [
+    "happy",
+    2,
+    6.25
+   ],
+   [
+    "look",
+    2,
+    6.25
+   ],
+   [
+    "get",
+    2,
+    6.25
+   ],
+   [
+    "name",
+    2,
+    6.25
+   ],
+   [
+    "sorry",
+    2,
+    6.25
+   ],
+   [
+    "yes",
+    2,
+    6.25
+   ],
+   [
+    "works",
+    2,
+    6.25
+   ]
+  ],
+  "hedges": [],
+  "boosters": [],
+  "polite": [],
+  "ai_hits": []
+ },
+ "home": "~/.personal-tone"
+}

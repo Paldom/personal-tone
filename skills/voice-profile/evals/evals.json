@@ -1,0 +1,116 @@
+{
+  "skill": "voice-profile",
+  "cases": [
+    {
+      "type": "should_trigger",
+      "prompt": "analyze my writing style from the corpus we built and write my voice profile"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "build my voice profile"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "what does my email writing style actually look like? sentence length, how I open and sign off, all that"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "extract my voice from my sent mail so an assistant can write like me later"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "learn how I write from these samples and document it"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "measure my style per register (internal vs external email, slack)"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "make a style guide of how I personally write, based on my own messages"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "rebuild my writing profile with the bigger corpus from this year"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "how do i usually sign off my emails? use my corpus"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "make this email sound like me"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "check whether this draft sounds like me"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "here's what I actually sent, learn from the difference"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "analyze the writing style of Hemingway"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "write a brand voice guide for our marketing team"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "what's the tone of this message my boss sent me?"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "clean my mbox export and strip the quoted replies"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "profile my customers' personalities from their emails"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "give me feedback on how to improve my writing skills"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "summarize this email thread"
+    },
+    {
+      "type": "quality",
+      "prompt": "Build my voice profile from ~/.personal-tone (corpus is there).",
+      "expected_behavior": [
+        "runs stylometry.py --write-profile --exemplars and reads the numeric summary before writing any prose",
+        "presents never-candidates and asks the user to confirm which become bans; only confirmed terms go into profile.json via --bans",
+        "writes profile.md as a narrative of the measured numbers per register (length band, openers/sign-offs with shares, contractions/hedges/politeness), without invented adjectives or rules the numbers do not support",
+        "annotates 3-5 exemplar ids per register in exemplars.json with a one-line note each, never duplicating the text",
+        "flags provisional registers as exemplars-only and does not write rules for them"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "analyze my writing style",
+      "expected_behavior": [
+        "checks for corpus.jsonl first; if missing, explains that voice-corpus builds it and offers to run that step",
+        "does not analyze pasted text as a stand-in for a corpus without saying the result is provisional"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "The summary shows 'leverage' and 'robust' appear in my corpus. Should they be banned?",
+      "expected_behavior": [
+        "explains these are not tells for this user because they appear in their own writing, and leaves them out of the bans",
+        "keeps generic AI-tell lists as reference only"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "My chat-dm register has 7 samples.",
+      "expected_behavior": [
+        "labels it provisional, uses it for exemplars only, and says how many samples would make it directional/solid",
+        "does not produce bands-based rules for it"
+      ]
+    }
+  ]
+}

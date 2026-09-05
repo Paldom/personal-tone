@@ -1,0 +1,122 @@
+{
+  "skill": "voice-calibrate",
+  "cases": [
+    {
+      "type": "should_trigger",
+      "prompt": "here's what I actually sent instead of your draft — learn from it"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "I edited your draft before sending. Compare and remember what I changed."
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "that draft was too formal, remember that for next time"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "log this correction: I never write 'I wanted to reach out', cut it always"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "compare my sent version with the draft and tell me what keeps getting corrected"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "show me the calibration report — which corrections recur?"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "stop using 'best regards', I never sign off like that. add it to my never list"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "the sent version is in sent.md, the draft in draft.md. note the gap"
+    },
+    {
+      "type": "should_trigger",
+      "prompt": "promote 'please do not hesitate' to a ban, I've removed it three times now"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "build my voice profile"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "write this in my voice"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "does this sound like me?"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "clean my mailbox export"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "compare these two emails and tell me which is better written"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "diff these two files"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "remember that I prefer dark mode in the editor"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "learn my writing style from my sent emails"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "correct the grammar in my sent email"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "update my email signature"
+    },
+    {
+      "type": "quality",
+      "prompt": "Here's your draft and what I actually sent (external email).\nDRAFT: Hi Sarah,\n\nI hope this email finds you well. I wanted to reach out regarding the Q3 numbers. It would be greatly appreciated if you could share the finalized figures at your earliest convenience.\n\nBest regards,\nDom\nSENT: Hi Sarah,\n\nCan you send the Q3 numbers by Friday? Rough cut is fine.\n\nThanks,\nDom\nReason: way too long and too polite.",
+      "expected_behavior": [
+        "writes both texts and the reason to private scratch files and runs delta.py with --register email-external and --reason-file, then reports the auto tags (LENGTH_CUT, LESS_FORMAL, LLM_ISM, SIGNOFF), the removed/added lines and the metric deltas",
+        "does not change profile.json from a single pair; says a rule needs to recur or an explicit instruction",
+        "does not store full texts unless the user asks (--keep-text)"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "That's the third time I've deleted 'I hope this finds you well'. Make it a rule.",
+      "expected_behavior": [
+        "runs delta.py --report; if the phrase recurs in the log (or the user states it as a standing rule) proposes --promote-ban with the register scope, shows the exact phrase and scope, and promotes with --confirm only after the user agrees",
+        "if the log does not show the recurrence, says so and offers to log the pair or promote it as an explicit instruction",
+        "mentions the profile snapshot and how to roll back"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "I changed the meeting date in your draft from Tuesday to Thursday before sending.",
+      "expected_behavior": [
+        "tags the entry FACT and explains fact corrections are excluded from voice mining",
+        "does not propose any style rule from it"
+      ]
+    },
+    {
+      "type": "quality",
+      "prompt": "what keeps getting corrected in my drafts?",
+      "expected_behavior": [
+        "runs delta.py --report and summarizes the tag counts, recurring removed/added phrases and the reasons given; suggests putting the top correction into the next voice-write brief"
+      ]
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "make this email friendlier and remember I like that"
+    },
+    {
+      "type": "should_not_trigger",
+      "prompt": "ban that dependency from the repo, add it to the never-install list"
+    }
+  ]
+}
